@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/roninvictus/Projects/ToDoApp/ToDo/ToDo.csproj": {}
+    "/Users/roninvictus/Desktop/ToDoApp/ToDo/ToDo.csproj": {}
   },
   "projects": {
-    "/Users/roninvictus/Projects/ToDoApp/ToDo/ToDo.csproj": {
+    "/Users/roninvictus/Desktop/ToDoApp/ToDo/ToDo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/roninvictus/Projects/ToDoApp/ToDo/ToDo.csproj",
+        "projectUniqueName": "/Users/roninvictus/Desktop/ToDoApp/ToDo/ToDo.csproj",
         "projectName": "ToDo",
-        "projectPath": "/Users/roninvictus/Projects/ToDoApp/ToDo/ToDo.csproj",
+        "projectPath": "/Users/roninvictus/Desktop/ToDoApp/ToDo/ToDo.csproj",
         "packagesPath": "/Users/roninvictus/.nuget/packages/",
-        "outputPath": "/Users/roninvictus/Projects/ToDoApp/ToDo/obj/",
+        "outputPath": "/Users/roninvictus/Desktop/ToDoApp/ToDo/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/roninvictus/.nuget/NuGet/NuGet.Config"

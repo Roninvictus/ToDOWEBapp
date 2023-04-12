@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CEFTFjiAG6R/hMK5TJ9nYTT1r7FmX+tXdi0v9wKSyzt5GGj3eUQ5IzsQ7B0y9yNCYOA/dIwnQpm2lUgwLD63xg==",
+  "dgSpecHash": "QlNaTWHyfbioYMMFV1WX8sALGLQK5avE41jMMoPKLxmNf2squGtd85zX73zkl8yAyt4dFtmIsNcoci8GpwY6ng==",
   "success": true,
-  "projectFilePath": "/Users/roninvictus/Projects/ToDoApp/ToDo/ToDo.csproj",
+  "projectFilePath": "/Users/roninvictus/Desktop/ToDoApp/ToDo/ToDo.csproj",
   "expectedPackageFiles": [
     "/Users/roninvictus/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/roninvictus/.nuget/packages/microsoft.data.sqlite.core/7.0.4/microsoft.data.sqlite.core.7.0.4.nupkg.sha512",
