@@ -8,15 +8,20 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    private ToDoContext _toDoContext;
+
+    public HomeController(ILogger<HomeController> logger,ToDoContext toDoContext)
     {
         _logger = logger;
+        _toDoContext = toDoContext;
     }
 
     public IActionResult Index()
     {
-        //get data from there
-
+     
+       ViewBag.TodoList = _toDoContext.ToDos.Where(c => c.Completed == false).ToList();
+   
+       
         return View();
     }
 
@@ -28,6 +33,7 @@ public class HomeController : Controller
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
+
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }

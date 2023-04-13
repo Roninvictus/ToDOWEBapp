@@ -7,3 +7,22 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
+@{
+    // Here we pull the data we sent from the homecontroller
+    List<ToDo> todos = ViewBag.TodoList;
+
+    <h3>In completed List</h3>
+    <br />
+    // Freeze the drawn list using foreach
+    foreach (ToDo item in todos)
+    {
+<div>
+    <div>Id :@item.Id</div>
+    <div>Title :@item.Title</div>
+    <div>Completed :@item.Completed</div>
+    <div>Description :@item.Description</div>
+    <br />
+</div>
+
+    }
+}
