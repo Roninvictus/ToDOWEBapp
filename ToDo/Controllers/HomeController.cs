@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using ToDo.Models;
 
+
+
 namespace ToDo.Controllers;
 
 public class HomeController : Controller
@@ -24,6 +26,19 @@ public class HomeController : Controller
        
         return View();
     }
+
+    [HttpPost]
+    public IActionResult postTodo(ToDo.Models.ToDo todo)
+    {
+        _toDoContext.Add(todo);   // Include table todo model after submission
+
+
+        _toDoContext.SaveChanges();  // Save changes to table
+
+        return RedirectToAction(nameof(Index));    // Redirect via Index view
+
+    }
+
 
     public IActionResult Privacy()
     {
