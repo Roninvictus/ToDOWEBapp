@@ -7,29 +7,21 @@ namespace ToDo.Models
     {
 		public ToDoContext(DbContextOptions<ToDoContext> options) : base(options) { }
 
-		public DbSet<ToDo> ToDo { get; set; } = null!;
+		public DbSet<ToDo> ToDos => Set<ToDo>();
 
-        public DbSet<Category> Categories { get; set; } = null!;
-
-        public DbSet<Status> Statuses { get; set; } = null!;
+      
 
         //seed data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Category>().HasData(
-                new Category { CategoryId = "work", Name = "Work" },
-                new Category { CategoryId = "home", Name = "Home" },
-                new Category { CategoryId = "ex", Name = "Exercise" },
-                new Category { CategoryId = "shop", Name = "Shopping" },
-                new Category { CategoryId = "call", Name = "Contact" }
+            modelBuilder.Entity<ToDo>().HasData(
+                new ToDo { Id = 1, Description = "Finish Web assignment", Title = "ToDo assignment", Completed = true },
+                new ToDo { Id = 2, Description = "Finish ios assignment", Title = "ios assignment", Completed = false },
+                new ToDo { Id = 3, Description = "Finish kotlin assignment", Title = "kotlin assignment", Completed = false },
+                new ToDo { Id = 4, Description = "Finish DBA assignment", Title = "DBA assignment", Completed = true }
             );
-
-            modelBuilder.Entity<Status>().HasData(
-                new Status { StatusId = "open", Name = "Open" },
-                new Status { StatusId = "closed", Name = "Closed" }
-                );
-
+               
         }
 
     }

@@ -1,6 +1,14 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using ToDo.Models;
+using Microsoft.EntityFrameworkCore.Sqlite;
+using Microsoft.EntityFrameworkCore;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.(Mistakenly created context file in models dir)
+builder.Services.AddDbContext<ToDoContext>(
+    options => options.UseSqlite("Data Source=/Users/roninvictus/Documents/Data/todoapp.db;")
+    );
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
